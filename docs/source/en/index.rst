@@ -3,8 +3,8 @@ GitHub Actions | SiteNetSoft
 
 GitHub Actions for SiteNetSoft projects.
 
-Implemented Actions
--------------------
+Implement Actions
+-----------------
 
 Create: ``.github/workflows/<name>.yml``.
 
@@ -30,6 +30,42 @@ Create ``.github/workflows/documentation.yml`` action:
     jobs:
       documentation:
         uses: SiteNetSoft/GitHub-Actions/.github/workflows/documentation.yml@master
+
+Code Count
+^^^^^^^^^^^^^
+
+Create ``.github/workflows/code-count.yml`` action:
+
+.. code-block::
+
+    on: [push]
+    jobs:
+      code-count:
+        uses: SiteNetSoft/GitHub-Actions/.github/workflows/code-count.yml@master
+
+EPub Check
+^^^^^^^^^^
+
+Create ``.github/workflows/epub-check.yml`` action:
+
+.. code-block::
+
+    on: [push]
+    jobs:
+      epub-check:
+        uses: SiteNetSoft/GitHub-Actions/.github/workflows/epub-check.yml@master
+
+GitLab Mirror
+^^^^^^^^^^^^^
+
+Create ``.github/workflows/gitlab-mirror.yml`` action:
+
+.. code-block::
+
+    on: [push]
+    jobs:
+      gitlab-mirror:
+        uses: SiteNetSoft/GitHub-Actions/.github/workflows/gitlab-mirror.yml@master
 
 Resources
 ---------

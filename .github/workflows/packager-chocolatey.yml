@@ -1,0 +1,50 @@
+name: Build and Push Chocolatey Package
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install Poetry
+        run: |
+          Invoke-Expression (Invoke-WebRequest -Uri https://install.python-poetry.org/powershell -UseBasicParsing).Content
+
+      - name: Install project dependencies
+        run: |
+          poetry install
+
+      - name: Install Chocolatey
+        run: |
+          Set-ExecutionPolicy Bypass -Scope Process -Force
+          iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+
+      - name: Create Chocolatey package
+        run: |
+          choco new my-package
+          cd my-package
+          # Add necessary scripts and files
+          # Adjust these commands to fit your package's needs
+          echo "Write-Host 'Installing...'" > tools\chocolateyInstall.ps1
+          echo "Write-Host 'Uninstalling...'" > tools\chocolateyUninstall.ps1
+          choco pack
+
+      - name: Push Chocolatey package
+        run: |
+          cd my-package
+          choco push my-package.0.1.0.nupkg --source='https://push.chocolatey.org/'
+        env:
+          # You'll need to set this secret in your GitHub repository
+          CHOCO_API_KEY: ${{ secrets.CHOCO_API_KEY }}

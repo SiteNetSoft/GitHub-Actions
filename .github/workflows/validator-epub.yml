@@ -1,0 +1,35 @@
+name: Validate EPUB file
+on:
+  push:
+    branches:
+      - master
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Setup Java
+      uses: actions/setup-java@v2
+      with:
+        java-version: '11'
+        distribution: 'adopt'
+
+    - name: Setup Maven
+      uses: actions/setup-maven@v2
+      with:
+        maven-version: '3.x'
+
+    - name: Checkout EPUBCheck
+      run: |
+        git clone https://github.com/w3c/epubcheck.git
+        cd epubcheck
+        mvn clean install
+
+    - name: Validate EPUB file
+      run: |
+        java -jar ./epubcheck/target/epubcheck.jar path_to_your_epub_file
