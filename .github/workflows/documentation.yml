@@ -1,0 +1,66 @@
+name: Generate and Deploy Documentation
+
+on:
+  push:
+    branches:
+      - master
+      - main
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    container:
+      image: rockylinux/rockylinux:latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3
+
+      - name: Install latexmk, zip, and cmap (dep for sphinx to generate PDFs and EPUBs)
+        run: |
+          dnf makecache --refresh
+          dnf update -y
+          dnf install -y epel-release
+          dnf install -y kile okular zip texlive-* make git
+          dnf install -y python311 python3-pip
+          dnf install -y latexmk
+          #sudo dnf install -y texlive-lang-all
+
+      - name: Install dependencies
+        run: |
+          pip3 install --upgrade pip
+          pip install sphinx sphinx_rtd_theme
+
+      - name: Generate HTML documentation
+        run: |
+          cd docs
+          make html
+          make latexpdf
+          mv ./build/latex/amadla.pdf ./amadla.pdf
+          rm -rf ./build/latex/*
+          mv ./amadla.pdf ./build/latex/amadla.pdf
+          make epub
+          zip -r amadla.epub ./build/epub/*
+          rm -rf ./build/epub/*
+          mv ./amadla.epub ./build/epub/amadla.epub
+
+      - name: Checkout AmadlaOrg.github.io repository
+        uses: actions/checkout@v3
+        with:
+          repository: AmadlaOrg/AmadlaOrg.github.io
+          token: ${{ secrets.GH_PAT_DOC }}
+          path: ./AmadlaOrg.github.io
+
+      - name: Copy HTML documentation to AmadlaOrg.github.io repository
+        run: |
+          cp -r docs/build/* ./AmadlaOrg.github.io/docs
+
+      - name: Commit and push changes
+        run: |
+          cd ./AmadlaOrg.github.io
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          if [ -n "$(git status --porcelain)" ]; then
+            git commit -m "Update documentation"
+            git push
+          fi

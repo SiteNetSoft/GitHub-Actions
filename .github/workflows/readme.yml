@@ -1,0 +1,33 @@
+name: Update README
+on:
+  push:
+    branches:
+      - master
+      - main
+
+jobs:
+  update-badge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository content
+        uses: actions/checkout@v3
+
+      - name: Get lines of code
+        id: loc
+        run: |
+          loc=$(git ls-files | grep -E '\.py$|\.sh|Dockerfile|\.cmd|_bash_completer|_completer$' | \
+                xargs wc -l | tail -n 1 | awk '{ print $1 }' | \
+                awk '{printf "%dk\n", ($1%1000 > 0) ? int($1/1000)+1 : int($1/1000)}')
+          echo "::set-output name=loc::$loc"
+
+      - name: Update README
+        run: |
+          sed -i "s/lines%20of%20code-k/lines%20of%20code-${{ steps.loc.outputs.loc }}/g" README.md
+
+      - name: Commit and push if it changed
+        run: |
+          git diff
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -am "Updated the Lines of Code badge" || exit 0
+          git push
