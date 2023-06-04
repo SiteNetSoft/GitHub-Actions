@@ -1,3 +1,5 @@
+<img src="./assets/workflow.webp" alt="Old photo of a workshop" style="width: 450px;" align="right">
+
 # GitHub Actions
 GitHub Actions
 
