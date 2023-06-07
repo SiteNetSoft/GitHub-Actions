@@ -16,15 +16,14 @@ SiteNetSoft GitHub Actions
 - [/docs](https://github.com/SiteNetSoft/GitHub-Actions/tree/master/docs) - GitHub Actions Documentation
 
 ## :books: Documentations
-- :card_index_dividers: [html](https://sitenetsoft.com/docs/html/en/)
-- :briefcase: [pdf](https://sitenetsoft.com/docs/pdf/en/)
-- :green_book: [epub](https://sitenetsoft.com/docs/epub/en/)
+- :card_index_dividers: [html](https://sitenetsoft.com/docs/latest/html/en/)
+- :briefcase: [pdf](https://sitenetsoft.com/docs/latest/pdf/en/)
+- :green_book: [epub](https://sitenetsoft.com/docs/latest/epub/en/)
 - :memo: [wiki](https://github.com/SiteNetSoft/GitHub-Actions/wiki)
 
 ## :scroll: COPYRIGHT and License
-* All the documentation in RST format or any transformation (found in the `docs/` directory and includes the README files): <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a> The documentation is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
 * The side top image: "<a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/125753676@N07/20950317165">do-less-but-better-a-lean-workflow</a>" by <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/125753676@N07">kanban_tool</a> is marked with <a target="_blank" rel="noopener noreferrer" href="https://creativecommons.org/publicdomain/mark/1.0/?ref=openverse">Public Domain Mark 1.0 <img src="https://mirrors.creativecommons.org/presskit/icons/pd.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img></a>.
-* The license for the code can be found in the [LICENSE](./LICENSE) file (also includes all the YAML files and other configuration files including the `conf.py` and `Makefile` found in the `docs/` directory).
+* The license for the code and documentation can be found in the [LICENSE](./LICENSE) file.
 
 ---
 
