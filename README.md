@@ -20,6 +20,7 @@ SiteNetSoft GitHub Actions
 - :briefcase: [pdf](https://sitenetsoft.com/docs/latest/pdf/en/)
 - :green_book: [epub](https://sitenetsoft.com/docs/latest/epub/en/)
 - :memo: [wiki](https://github.com/SiteNetSoft/GitHub-Actions/wiki)
+- :open_book: [readthedocs](https://github-actions-sitenetsoft.readthedocs.io/en/latest/)
 
 ## :scroll: COPYRIGHT and License
 * The top side image: "<a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/125753676@N07/20950317165">do-less-but-better-a-lean-workflow</a>" by <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/125753676@N07">kanban_tool</a> is marked with <a target="_blank" rel="noopener noreferrer" href="https://creativecommons.org/publicdomain/mark/1.0/?ref=openverse">Public Domain Mark 1.0 <img src="https://mirrors.creativecommons.org/presskit/icons/pd.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img></a>.
