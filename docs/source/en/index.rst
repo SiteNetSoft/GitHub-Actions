@@ -43,6 +43,18 @@ Create ``.github/workflows/code-count.yml`` action:
       code-count:
         uses: SiteNetSoft/GitHub-Actions/.github/workflows/code-count.yml@master
 
+Deploy
+^^^^^^^^^^^^^
+
+Create ``.github/workflows/code-count.yml`` action:
+
+.. code-block::
+
+    on: [push]
+    jobs:
+      code-count:
+        uses: SiteNetSoft/GitHub-Actions/.github/workflows/code-count.yml@master
+
 EPub Check
 ^^^^^^^^^^
 

@@ -47,3 +47,23 @@ Windows
 * `**Chocolatey** <https://chocolatey.org/>`__: Windows package
 * `**Scoop** <https://scoop.sh/>`__: Windows package
 * `**NSIS** <https://nsis.sourceforge.io/Main_Page>`__: Windows package
+
+Packagers List
+--------------
+
+* `**packager-apk.yml** <.github/workflows/packager-apk.yml>`__: Alpine package
+* `**packager-chocolatey.yml** <.github/workflows/packager-chocolatey.yml>`__: Chocolatey package
+* `**packager-deb.yml** <.github/workflows/packager-deb.yml>`__: Debian package
+* `**packager-ebuild.yml** <.github/workflows/packager-ebuild.yml>`__: Ebuild image
+* `**packager-flatpak.yml** <.github/workflows/packager-flatpak.yml>`__: Flatpak package
+* `**packager-homebrew.yml** <.github/workflows/packager-homebrew.yml>`__: Homebrew package
+* `**packager-macports.yml** <.github/workflows/packager-macports.yml>`__: MacPorts package
+* `**packager-nsis.yml** <.github/workflows/packager-nsis.yml>`__: NSIS package
+* `**packager-pacman.yml** <.github/workflows/packager-pacman.yml>`__: Pacman package
+* `**packager-pip.yml** <.github/workflows/packager-pip.yml>`__: Pip package
+* `**packager-pkgbuild.yml** <.github/workflows/packager-pkgbuild.yml>`__: Pkgbuild package
+* `**packager-rpm.yml** <.github/workflows/packager-rpm.yml>`__: RPM package
+* `**packager-scoop.yml** <.github/workflows/packager-scoop.yml>`__: Scoop package
+* `**packager-slackware.yml** <.github/workflows/packager-slackware.yml>`__: Slackware package
+* `**packager-snap.yml** <.github/workflows/packager-snap.yml>`__: Snap package
+* `**packager-tarball.yml** <.github/workflows/packager-tarball.yml>`__: Tarball packages
