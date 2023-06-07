@@ -1,7 +1,6 @@
 <img src="./assets/workflow.webp" alt="Old photo of a workshop" style="width: 450px;" align="right">
 
 # GitHub Actions
-GitHub Actions
 
 [![Language: English](https://img.shields.io/badge/Language-English-blue.svg)](./README.md)
 [![Language: Français](https://img.shields.io/badge/Langue-Fran%C3%A7ais-blue.svg)](./README.fr.md)
@@ -10,6 +9,8 @@ GitHub Actions
 [![GitHub forks](https://img.shields.io/github/forks/SiteNetSoft/GitHub-Actions?logo=github)](https://github.com/SiteNetSoft/GitHub-Actions/network)
 [![License](https://img.shields.io/github/license/SiteNetSoft/GitHub-Actions)](https://github.com/SiteNetSoft/GitHub-Actions/blob/master/LICENSE)
 [![GitHub Last Commit](https://img.shields.io/github/last-commit/SiteNetSoft/GitHub-Actions?logo=github)](https://github.com/SiteNetSoft/GitHub-Actions/commits/master)
+
+SiteNetSoft GitHub Actions
 
 - [.github/workflows/](https://github.com/SiteNetSoft/GitHub-Actions/tree/master/.github/workflows) - GitHub Actions Reusable Workflows Library
 - [/docs](https://github.com/SiteNetSoft/GitHub-Actions/tree/master/docs) - GitHub Actions Documentation
