@@ -1,0 +1,12 @@
+name: Run multiple tests types, Python versions and on multiple OSs
+
+on:
+  workflow_call:
+    inputs:
+      debug:
+        description: 'Debug mode'
+        type: boolean
+        required: false
+        default: false
+
+jobs:
