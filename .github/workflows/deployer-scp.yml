@@ -1,0 +1,76 @@
+name: OpenSSH secure file copy
+
+on:
+  workflow_call:
+    secrets:
+        SSH_PRIVATE_KEY:
+            description: 'SSH private key'
+            required: true
+        SSH_PUBLIC_KEY:
+            description: 'SSH public key'
+            required: true
+    inputs:
+        host:
+          description: 'SSH host'
+          type: string
+          required: true
+        port:
+            description: 'SSH port'
+            type: number
+            required: false
+            default: 22
+        username:
+            description: 'SSH username'
+            type: string
+            required: true
+        source:
+            description: 'Source file'
+            type: string
+            required: true
+        destination:
+            description: 'Destination file'
+            type: string
+            required: true
+        mode:
+            description: 'File mode'
+            type: number
+            required: false
+            default: 0644
+        owner:
+            description: 'File owner'
+            type: string
+            required: false
+            default: root
+        group:
+            description: 'File group'
+            type: string
+            required: false
+            default: root
+        debug:
+            description: 'Debug mode'
+            type: boolean
+            required: false
+            default: false
+
+permissions:
+    contents: read
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+            - name: Copy file
+              uses: appleboy/scp-action@master
+              with:
+                  host: ${{ github.event.inputs.host }}
+                  port: ${{ github.event.inputs.port }}
+                  username: ${{ github.event.inputs.username }}
+                  key: ${{ secrets.SSH_PRIVATE_KEY }}
+                  source: ${{ github.event.inputs.source }}
+                  target: ${{ github.event.inputs.destination }}
+                  mode: ${{ github.event.inputs.mode }}
+                  owner: ${{ github.event.inputs.owner }}
+                  group: ${{ github.event.inputs.group }}
+                  debug: ${{ github.event.inputs.debug }}

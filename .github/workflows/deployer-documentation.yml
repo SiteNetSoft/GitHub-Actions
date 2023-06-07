@@ -1,0 +1,16 @@
+name: Deploy Documentation
+
+on:
+  workflow_call:
+    secrets:
+      GH_PAT_DOC:
+        description: GitHub Token with permissions 'repo' and 'read:org' to list GitHub repos
+        required: true
+    inputs:
+      repo:
+        description: The GitHub repo that will receive the documentation
+        type: string
+        required: true
+
+
+jobs:
