@@ -34,6 +34,16 @@ Golang
 
 Normally with Golang the library used is `golangci-lint <https://golangci-lint.run/>`__.
 
+PHP
+^^^
+
+Normally with PHP the library used is ``phpcs``.
+
+Rust
+^^^^
+
+Normally with Rust the library used is ``clippy``.
+
 Unit Tests
 ----------
 
@@ -58,6 +68,16 @@ Golang
 ^^^^^^
 
 Normally with Golang the library used is `go test <https://golang.org/pkg/testing/>`__.
+
+PHP
+^^^
+
+Normally with PHP the library used is `phpunit <https://phpunit.de/>`__.
+
+Rust
+^^^^
+
+Normally with Rust the library used is ``cargo test``.
 
 Integration Tests
 -----------------
@@ -84,6 +104,16 @@ Golang
 
 Normally with Golang the library used is `go test <https://golang.org/pkg/testing/>`__.
 
+PHP
+^^^
+
+Normally with PHP the library used is `phpunit <https://phpunit.de/>`__.
+
+Rust
+^^^^
+
+Normally with Rust the library used is ``cargo test``.
+
 Security Tests
 --------------
 
@@ -109,6 +139,16 @@ Golang
 
 Normally with Golang the library used is ``gosec``.
 
+PHP
+^^^
+
+Normally with PHP the library used is ``phpcs-security-audit``.
+
+Rust
+^^^^
+
+Normally with Rust the library used is ``cargo audit``.
+
 BDD Tests
 ---------
 
@@ -133,3 +173,13 @@ Golang
 ^^^^^^
 
 Normally with Golang the library used is ``godog``.
+
+PHP
+^^^
+
+Normally with PHP the library used is ``behat``.
+
+Rust
+^^^^
+
+Normally with Rust the library used is ``cucumber-rust``.
