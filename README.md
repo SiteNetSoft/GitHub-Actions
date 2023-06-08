@@ -10,11 +10,11 @@
 [![License](https://img.shields.io/github/license/SiteNetSoft/GitHub-Actions)](https://github.com/SiteNetSoft/GitHub-Actions/blob/master/LICENSE)
 [![GitHub Last Commit](https://img.shields.io/github/last-commit/SiteNetSoft/GitHub-Actions?logo=github)](https://github.com/SiteNetSoft/GitHub-Actions/commits/master)
 
-SiteNetSoft GitHub Actions
+:running_man: SiteNetSoft GitHub Actions
 
-- [.github/workflows/](https://github.com/SiteNetSoft/GitHub-Actions/tree/master/.github/workflows) - GitHub Actions Reusable Workflows Library
-- [/docs](https://github.com/SiteNetSoft/GitHub-Actions/tree/master/docs) - GitHub Actions Documentation (reStructuredText `.rst` format)
-- [/src](https://github.com/SiteNetSoft/GitHub-Actions/tree/master/src) - Source files for GitHub Actions made with Bash, Python, etc
+- :mechanic: [.github/workflows/](https://github.com/SiteNetSoft/GitHub-Actions/tree/master/.github/workflows) - GitHub Actions Reusable Workflows Library
+- :books: [/docs](https://github.com/SiteNetSoft/GitHub-Actions/tree/master/docs) - GitHub Actions Documentation (reStructuredText `.rst` format)
+- :newspaper_roll: [/src](https://github.com/SiteNetSoft/GitHub-Actions/tree/master/src) - Source files for GitHub Actions made with Bash, Python, etc
 
 ## :books: Documentations
 - :card_index_dividers: [html](https://sitenetsoft.com/docs/latest/html/en/)
