@@ -12,5 +12,4 @@ on:
         type: string
         required: true
 
-
 jobs:
