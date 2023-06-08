@@ -48,3 +48,16 @@ Resources
 
 - `Hari Sekhon <https://github.com/HariSekhon/GitHub-Actions>`__ - GitHub Actions for DevOps Workflows
 - `Reusing Workflows <https://docs.github.com/en/actions/using-workflows/reusing-workflows#calling-a-reusable-workflow>`__ - GitHub Docs
+
+Contents
+--------
+
+.. toctree::
+
+   deployers
+   makers
+   mirrors
+   packagers
+   src
+   tests
+   validators
