@@ -13,7 +13,8 @@
 SiteNetSoft GitHub Actions
 
 - [.github/workflows/](https://github.com/SiteNetSoft/GitHub-Actions/tree/master/.github/workflows) - GitHub Actions Reusable Workflows Library
-- [/docs](https://github.com/SiteNetSoft/GitHub-Actions/tree/master/docs) - GitHub Actions Documentation
+- [/docs](https://github.com/SiteNetSoft/GitHub-Actions/tree/master/docs) - GitHub Actions Documentation (reStructuredText `.rst` format)
+- [/src](https://github.com/SiteNetSoft/GitHub-Actions/tree/master/src) - Source files for GitHub Actions made with Bash, Python, etc
 
 ## :books: Documentations
 - :card_index_dividers: [html](https://sitenetsoft.com/docs/latest/html/en/)
@@ -21,6 +22,10 @@ SiteNetSoft GitHub Actions
 - :green_book: [epub](https://sitenetsoft.com/docs/latest/epub/en/)
 - :memo: [wiki](https://github.com/SiteNetSoft/GitHub-Actions/wiki)
 - :open_book: [readthedocs](https://github-actions-sitenetsoft.readthedocs.io/en/latest/)
+
+### :fleur_de_lis: Why is the documentation also in French?
+
+Our *127.0.0.1* is in Québec :fleur_de_lis:, Canada 🇨🇦 for this reason we have to provide our [documentation in French](./README.fr.md).
 
 ## :scroll: COPYRIGHT and License
 * The top side image: "<a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/125753676@N07/20950317165">do-less-but-better-a-lean-workflow</a>" by <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/125753676@N07">kanban_tool</a> is marked with <a target="_blank" rel="noopener noreferrer" href="https://creativecommons.org/publicdomain/mark/1.0/?ref=openverse">Public Domain Mark 1.0 <img src="https://mirrors.creativecommons.org/presskit/icons/pd.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img></a>.
