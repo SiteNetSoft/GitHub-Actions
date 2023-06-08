@@ -123,12 +123,17 @@ jobs:
       - name: Install Python build dependencies (MacOS)
         run: |
           brew install openssl readline
-          echo 'export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"' >> ~/.bash_profile
+          OpenSSL_version=$(brew list --versions openssl | cut -d ' ' -f 2)
+          echo 'export PATH="/usr/local/opt/openssl@$OpenSSL_version/bin:$PATH"' >> ~/.bash_profile
           echo 'export PATH="/usr/local/opt/readline/bin:$PATH"' >> ~/.bash_profile
-          echo 'export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/readline/lib"' >> ~/.bash_profile
-          echo 'export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include -I/usr/local/opt/readline/include"' >> ~/.bash_profile
-          echo 'export PKG_CONFIG_PATH="/usr/local/opt/openssl@1.1/lib/pkgconfig:/usr/local/opt/readline/lib/pkgconfig"' >> ~/.bash_profile
+          echo 'export LDFLAGS="-L/usr/local/opt/openssl@$OpenSSL_version/lib -L/usr/local/opt/readline/lib"' >> ~/.bash_profile
+          echo 'export CPPFLAGS="-I/usr/local/opt/openssl@$OpenSSL_version/include -I/usr/local/opt/readline/include"' >> ~/.bash_profile
+          echo 'export PKG_CONFIG_PATH="/usr/local/opt/openssl@$OpenSSL_version/lib/pkgconfig:/usr/local/opt/readline/lib/pkgconfig"' >> ~/.bash_profile
           source ~/.bash_profile
+          env LDFLAGS="-L/usr/local/opt/openssl@$OpenSSL_version/lib -L/usr/local/opt/readline/lib" CPPFLAGS="-I/usr/local/opt/openssl@$OpenSSL_version/include -I/usr/local/opt/readline/include"
+          brew install pyenv
+          pyenv install ${{ matrix.python-version }}
+          pyenv global ${{ matrix.python-version }}
 
       - name: Download and compile Python
         run: |
@@ -169,10 +174,8 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Install Python build dependencies (Windows)
-        if: runner.os == 'Windows'
         run: |
           choco install openssl.light
-          choco install vcpython27
           refreshenv
 
       - name: Set up Python
