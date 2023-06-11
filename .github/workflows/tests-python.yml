@@ -14,8 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [ '3.10', '3.11' ]
-        python-release: [ '3.10.12', '3.11.4' ]
+        python-version: [ '3.11' ]
+        python-release: [ '3.11.4' ]
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -64,8 +64,8 @@ jobs:
     container: rockylinux/rockylinux:latest
     strategy:
       matrix:
-        python-version: [ '3.10', '3.11' ]
-        python-release: [ '3.10.12', '3.11.4' ]
+        python-version: [ '3.11' ]
+        python-release: [ '3.11.4' ]
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -114,8 +114,8 @@ jobs:
     runs-on: macos-latest
     strategy:
       matrix:
-        python-version: [ '3.10', '3.11' ]
-        python-release: [ '3.10.12', '3.11.4' ]
+        python-version: [ '3.11' ]
+        python-release: [ '3.11.4' ]
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -167,8 +167,8 @@ jobs:
     runs-on: windows-latest
     strategy:
       matrix:
-        python-version: [ '3.10', '3.11' ]
-        python-release: [ '3.10.12', '3.11.4' ]
+        python-version: [ '3.11' ]
+        python-release: [ '3.11.4' ]
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
